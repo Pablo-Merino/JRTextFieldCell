@@ -6,15 +6,16 @@
 //  Copyright (c) 2012 GJB Software. All rights reserved.
 //
 
-#import "TextFieldCell.h"
+#import "JRTextFieldCell.h"
 
-@interface TextFieldCell ()
+@interface JRTextFieldCell ()
 
 - (void)_applyTextFieldOffset;
 
 @end
 
-@implementation TextFieldCell
+@implementation JRTextFieldCell
+
 @synthesize textField=_textField;
 @synthesize textFieldOffset=_offset;
 @synthesize autoSizesWithLabel=_autoSize;

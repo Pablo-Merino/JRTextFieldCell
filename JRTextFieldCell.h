@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol TextFieldCellDelegate;
+@protocol JRTextFieldCellDelegate;
 
-@interface TextFieldCell : UITableViewCell <UITextFieldDelegate> {
+@interface JRTextFieldCell : UITableViewCell <UITextFieldDelegate> {
     UITextField                 *_textField;
     NSUInteger                  _offset;
     BOOL                        _autoSize;
@@ -29,7 +29,7 @@
 
 // Delegate gets a message when you hit return on the text field.
 // Convenient for return chains in tables where there are multiple text cells
-@property (nonatomic, assign) id<TextFieldCellDelegate> returnDelegate;
+@property (nonatomic, assign) id<JRTextFieldCellDelegate> returnDelegate;
 
 // Just convenience methods for becoming/resigning first responder
 - (void)beginEditing;
@@ -38,8 +38,8 @@
 @end
 
 
-@protocol TextFieldCellDelegate <NSObject>
+@protocol JRTextFieldCellDelegate <NSObject>
 
-- (void)textFieldCellReturned:(TextFieldCell *)textFieldCell;
+- (void)textFieldCellReturned:(JRTextFieldCell *)textFieldCell;
 
 @end
