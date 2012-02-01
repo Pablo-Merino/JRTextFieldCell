@@ -73,6 +73,8 @@
 }
 
 - (void)prepareForReuse {
+    [super prepareForReuse];
+    
     self.returnDelegate = nil;
     self.textFieldOffset = 0;
     self.autoSizesWithLabel = NO;
