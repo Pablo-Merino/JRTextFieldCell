@@ -41,7 +41,7 @@
 
 - (void)_applyTextFieldOffset {    
     CGRect frame;
-    frame.origin.x = (10 + self.textFieldOffset);
+    frame.origin.x = (self.textLabel.frame.size.width - 180 + self.textFieldOffset);
     frame.origin.y = ((self.contentView.frame.size.height / 2) - (self.textField.frame.size.height / 2));
     frame.size.width = ((self.contentView.frame.size.width - 20) - self.textFieldOffset);
     frame.size.height = self.textField.frame.size.height;
